@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>WoT-TP link Control</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+form {
+margin: 150 auto;
+width:250px;
+}
+div.a {
+    text-align: center;
+}
+
+div.b {
+    text-align: left;
+}
+
+div.c {
+    text-align: right;
+}
+
+div.d {
+    text-align: justify;
+}
+</style>
+</head>
+<script src="routes.js"></script>
+<body>
+  <div class="a"><h2>Web of Things - TP link smart bulb</h2></div>
+<div class="a"><h3> Click to Control me and notice the URL of me !!</h3></div>
+<br>
+<div class="a"><h4>After turning me on "/bulb/on/xx" replace xx and pass me a value between 0-100,see My Magic !!</h4></div>
+
+
+  <form action="/bulb/on" method="post">
+    <button type="submit" class="btn btn-success">Turn me ON !</button>
+    <button type="submit" formmethod="post" formaction="/bulb/off" class="btn btn-danger">Turn me OFF !</button>
+  </form>
+
+</body>
+
+
+<!-- <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+window.onload = function() {
+   var getInput = prompt(slider.value);
+   localStorage.setItem("storageName",getInput);
+}
+</script> -->
+</html>
